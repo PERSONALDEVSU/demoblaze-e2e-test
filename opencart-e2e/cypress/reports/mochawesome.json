@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-13T17:01:47.760Z",
+    "end": "2026-03-13T17:03:55.119Z",
+    "duration": 127359,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea33f69c-0a77-4b90-8d3d-f3d5574e858c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\opencart_purchase.spec.cy.js",
+      "file": "cypress\\e2e\\opencart_purchase.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e3407856-7c8a-489d-a628-76f347271713",
+          "title": "OpenCart Purchase Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should complete purchase as guest",
+              "fullTitle": "OpenCart Purchase Flow Should complete purchase as guest",
+              "timedOut": null,
+              "duration": 127296,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opencart.abstracta.us/', {\n  timeout: 120000,\n  failOnStatusCode: false\n});\ncy.get('.product-thumb', {\n  timeout: 20000\n}).should('be.visible');\ncy.get('.product-thumb button[onclick*=\"cart.add\"]').eq(0).click();\ncy.get('.product-thumb button[onclick*=\"cart.add\"]').eq(1).click();\ncy.wait(1000);\ncy.get('#cart').click();\ncy.contains('View Cart').should('be.visible').click();\ncy.url().should('include', 'checkout/cart');\n// VALIDACIÓN PARA EVITAR QUE CYRESS SE QUEDE ESPERANDO EL LOAD\ncy.get('.table-responsive', {\n  timeout: 20000\n}).should('be.visible');\ncy.contains('Checkout').click();\ncy.contains('Checkout Options', {\n  timeout: 10000\n}).should('be.visible');\ncy.get('input[value=\"guest\"]').should('be.visible').check();\ncy.get('#button-account').click();\ncy.get('#input-payment-firstname').type('QA');\ncy.get('#input-payment-lastname').type('Automation');\ncy.get('#input-payment-email').type('qa@test.com');\ncy.get('#input-payment-telephone').type('12345678');\ncy.get('#input-payment-address-1').type('Test Street');\ncy.get('#input-payment-city').type('QACity');\ncy.get('#input-payment-postcode').type('170101');\ncy.get('#input-payment-country').select('Ecuador');\ncy.get('#input-payment-zone').select(1);\ncy.get('#button-guest').click();\ncy.get('#button-shipping-method').click();\ncy.get('input[name=\"agree\"]').check();\ncy.get('#button-payment-method').click();\ncy.get('#button-confirm').click();\ncy.contains('Your order has been placed').should('be.visible');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `120000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `120000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `120000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `120000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:134177:64)\n    at <unknown> (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:134493:16)\n    at tryCatcher (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:1777:23)\n    at <unknown> (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:4156:41)\n    at tryCatcher (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://opencart.abstracta.us/__cypress/runner/cypress_runner.js:2256:14)",
+                "diff": null
+              },
+              "uuid": "a75df1ca-45ee-40bf-a721-e842300d3b28",
+              "parentUUID": "e3407856-7c8a-489d-a628-76f347271713",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a75df1ca-45ee-40bf-a721-e842300d3b28"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 127296,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

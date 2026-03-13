@@ -1,0 +1,13 @@
+CONCLUSIONES
+
+Se implementó una prueba E2E utilizando Cypress que automatiza el flujo de compra en Demoblaze.
+
+El test valida:
+
+- Selección de productos
+- Adición al carrito
+- Visualización de carrito
+- Registro de datos de compra
+- Confirmación de compra
+
+La automatización permite validar rápidamente el flujo principal del negocio, reduciendo el tiempo de pruebas manuales y permitiendo su integración en pipelines CI/CD.

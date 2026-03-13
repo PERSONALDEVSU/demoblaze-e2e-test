@@ -1,0 +1,17 @@
+CONCLUSIONES
+
+Se implementaron pruebas E2E automatizadas utilizando Cypress para validar los flujos críticos de compra en Demoblaze y SauceDemo.
+
+Principales hallazgos:
+
+- Los flujos críticos del negocio pueden ser automatizados de manera eficiente mediante pruebas E2E.
+- Cypress permite validar interacciones de usuario, flujos completos y estados del sistema de forma confiable.
+- El uso del patrón Page Object Model mejora la mantenibilidad del código de pruebas.
+
+Beneficios identificados:
+
+- Reducción del tiempo de ejecución de pruebas regresivas.
+- Mayor confiabilidad en validaciones de flujos críticos.
+- Posibilidad de integración directa en pipelines CI/CD.
+
+Este tipo de automatización es fundamental en entornos ágiles donde los cambios son frecuentes y se requiere validación continua.

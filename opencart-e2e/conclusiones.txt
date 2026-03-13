@@ -1,0 +1,20 @@
+Se implementó una prueba E2E automatizada para validar el flujo completo de compra en OpenCart utilizando Cypress.
+
+La automatización cubre los pasos críticos del negocio:
+
+- selección de productos
+- gestión de carrito
+- proceso de checkout como invitado
+- confirmación de compra
+
+Durante la automatización del flujo en OpenCart se identificó que el sitio demo presenta
+problemas en la carga completa de la página debido a scripts externos (pagespeed),
+lo que provoca que el evento "load" no se dispare correctamente.
+
+Para garantizar la estabilidad de la automatización se implementaron validaciones
+basadas en elementos del DOM en lugar de depender del evento de carga completo
+de la página.
+
+El uso de selectores robustos y validaciones garantiza estabilidad en la ejecución del test.
+
+Esta automatización puede integrarse fácilmente en pipelines CI/CD para validar regresiones de manera continua.
